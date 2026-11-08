@@ -1,0 +1,20 @@
+@model ProductCatalog.Models.Product
+
+<div class="card shadow-sm mb-3">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+
+        <p>Бағасы: @Model.Price ₸</p>
+
+        <p>Санаты: @Model.Category</p>
+
+        @if (Model.IsAvailable)
+        {
+            <span class="badge bg-success">Қолжетімді</span>
+        }
+        else
+        {
+            <span class="badge bg-danger">Қолжетімсіз</span>
+        }
+    </div>
+</div>

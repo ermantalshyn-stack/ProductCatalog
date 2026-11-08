@@ -1,0 +1,20 @@
+@model IEnumerable<ProductCatalog.Models.Product>
+
+@{
+    ViewData["Title"] = "Тауарлар каталогы";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">
+        Тауарлар каталогы
+    </h2>
+
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4">
+                <partial name="_ProductCard" model="product" />
+            </div>
+        }
+    </div>
+</div>
